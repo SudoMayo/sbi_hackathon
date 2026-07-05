@@ -1,0 +1,27 @@
+[
+  {
+    "source": "transaction",
+    "payload": {
+      "household_id": "HH-1001",
+      "pattern": "seasonal_agri_credit",
+      "note": "Recurring seasonal transactions suggest crop-insurance season is starting; no active policy on file."
+    }
+  },
+  {
+    "source": "app_usage",
+    "payload": {
+      "household_id": "HH-1002",
+      "app_sessions_last_30_days": 0,
+      "note": "No app activity; low digital comfort, candidate for BC home visit."
+    }
+  },
+  {
+    "source": "bc_field_activity",
+    "payload": {
+      "household_id": "HH-1003",
+      "onboarding_stage": "kyc_started",
+      "last_update_days_ago": 9,
+      "note": "Onboarding appears stalled after KYC start."
+    }
+  }
+]
