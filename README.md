@@ -96,25 +96,21 @@ flowchart TB
 ## Project structure
 
 ```
-setu-prototype/
-├── .github/
-│   └── copilot-instructions.md   # Full mission context for GitHub Copilot
-├── agents/
-│   ├── orchestrator.py
-│   ├── life_event_agent.py
-│   ├── product_fit_agent.py
-│   ├── channel_agent.py
-│   ├── compliance_agent.py
-│   ├── vernacular_copilot.py
-│   ├── bc_field_agent.py
-│   ├── dropoff_recovery_agent.py
-│   └── feedback_agent.py
-├── data/
-│   └── sample_signals.json       # Mock transaction/BC/app signals for local testing
-├── main.py                       # FastAPI entrypoint, wires agents together
-├── requirements.txt
-├── .env.example
-└── .gitignore
+README.md                         # Repo homepage on GitHub
+agents/
+├── orchestrator.py
+├── life_event_agent.py
+├── product_fit_agent.py
+├── channel_agent.py
+├── compliance_agent.py
+├── vernacular_copilot.py
+├── bc_field_agent.py
+├── dropoff_recovery_agent.py
+└── feedback_agent.py
+data/
+└── sample_signals.json           # Mock transaction/BC/app signals for local testing
+main.py                           # FastAPI entrypoint, wires agents together
+requirements.txt
 ```
 
 ## Getting started
@@ -126,15 +122,10 @@ setu-prototype/
    source venv/bin/activate        # Windows: venv\Scripts\activate
    pip install -r requirements.txt
    ```
-3. Copy `.env.example` to `.env` and fill in your Anthropic API key:
-   ```bash
-   cp .env.example .env
-   ```
-4. Run the API locally:
+3. Run the API locally:
    ```bash
    uvicorn main:app --reload
    ```
-5. Open `.github/copilot-instructions.md` once at the start of your session so GitHub Copilot (Chat or inline) has the full mission and architecture in context before you ask it to build out each agent.
 
 ## 30-day prototype plan
 
